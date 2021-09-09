@@ -24,8 +24,8 @@ h2{
 }
 #myVideo {
     position: fixed;
-    right: -20px;
-    bottom: -20px;
+    left: -50px;
+    top: -50px;
     min-width: 100%;
     min-height: 100%;
 }
