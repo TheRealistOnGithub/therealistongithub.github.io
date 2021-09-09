@@ -4,4 +4,12 @@ body {
 
 h1 {
     font-family: 'Urbanist', sans-serif;
+    position: center;
+    font-size: 200%;
+}
+
+h2{
+    font-family: 'Urbanist', sans-serif;
+    position: center;
+    font-size: 200%;
 }
