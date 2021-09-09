@@ -18,11 +18,13 @@ h2{
 
 p{
     font-family: 'Urbanist', sans-serif;
+    position:center;
     color: #f1f1f1;
 }
 
 ul{
     font-family:'Urbanist',sans-serif;
+    position:center;
     color: #f1f1f1;
 }
 
@@ -37,8 +39,8 @@ ul{
 }
 #myVideo {
     position: fixed;
-    left: 50px;
-    top: 50px;
+    left: 0;
+    top: 0;
     min-width: 100%;
     min-height: 100%;
 }
