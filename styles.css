@@ -9,25 +9,26 @@ h1 {
     color: #f1f1f1;
 }
 
-h2{
+h2 {
     font-family: 'Urbanist', sans-serif;
     position: center;
     font-size: 200%;
     color: #f1f1f1;
 }
 
-p{
+p {
     font-family: 'Urbanist', sans-serif;
-    position:center;
+    position: center;
     color: #f1f1f1;
 }
 
-ul{
-    font-family:'Urbanist',sans-serif;
-    position:center;
+ul {
+    font-family: 'Urbanist', sans-serif;
+    position: center;
     color: #f1f1f1;
 }
-a{
+
+a {
     color: white;
 }
 
@@ -40,6 +41,7 @@ a{
     padding: 0;
     font-family: 'Urbanist', sans-serif;
 }
+
 #myVideo {
     position: fixed;
     left: 0;
