@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<audio loop autoplay>
+    <source src="/audio/BGM.mp3" type="audio/mp3">
+</audio>
+<video autoplay muted loop id="myVideo">
+    <source src="/video/SUFuture%20Credits%20(Textless%201080p24%20LOOPING).mp4" type="video/mp4">
+</video>
+<head>
+    <title>Contact Form</title>
+    <script>
+        src = "src/index.js"
+    </script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function () {
+            // https://dashboard.emailjs.com/admin/integration
+            emailjs.init('user_e3JyZJM7g7sO936ULyS71');
+        })();
+    </script>
+
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<div class="navbar">
+    <ul class="navbar-list">
+        <li class="navbar-item"><a href="https://rallarey.github.io/">Previous Student</a></li>
+        <li class="navbar-item"><a href="https://therealistongithub.github.io/index.html">Home</a></li>
+        <li class="navbar-item"><a href="https://therealistongithub.github.io/aboutMe.html">About Me </a></li>
+        <li class="navbar-item"><a class="active" href="https://therealistongithub.github.io/contactme.html">Contact</a>
+        </li>
+        <li class="navbar-item"><a href="https://mattm401.github.io/">Course Link</a></li>
+        <li class="navbar-item"><a href="https://gizmo-udel.github.io/">Next Student</a></li>
+    </ul>
+</div>
+<div class="contact">
+    <h1>
+        Contact Me!
+    </h1>
+    <form id="contact-form">
+        <input type="hidden" name="contact_number">
+        <label> First Name</label>
+        <input type="text" placeholder="Enter your first name" id="user_fname" name="user_fname"/>
+        <br><br>
+        <label> Last Name</label>
+        <input type="text" placeholder="Enter your last name" id="user_lname" name="user_lname"/>
+        <br><br>
+        <label> Phone Number</label>
+        <input type="text" placeholder="Enter your phone number" id="user_phone" name=" user_phone"/>
+        <br><br>
+        <label>Email</label>
+        <input type="text" placeholder="Enter your email" id="user_email"/>
+        <br><br>
+        <label>Message</label>
+        <textarea name="message"></textarea>
+        <input type="submit" value="Send">
+        <br><br>
+    </form>
+</div>
+
+</body>
+</html>

@@ -4,8 +4,9 @@ body {
 
 h1 {
     font-family: 'Urbanist', sans-serif;
-    position: center;
-    font-size: 200%;
+    position: relative;
+    text-align: center;
+    font-size: 72px;
     color: #f1f1f1;
 }
 
@@ -20,6 +21,7 @@ p {
     font-family: 'Urbanist', sans-serif;
     position: center;
     color: #f1f1f1;
+    font-size: 22px;
 }
 
 ul {
@@ -31,16 +33,108 @@ ul {
 a {
     color: white;
 }
+li{
+    font-size: 20px;
+}
+
+body {
+    margin: 0;
+    height: 100%;
+    overflow: hidden
+}
+
+
+li a {
+    font-family: 'Urbanist', sans-serif;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+
+}
+
+li a:hover:not(.active) {
+    background-color: #111;
+}
+
+img {
+
+    border-radius: 10%;
+    width: 25%;
+    height: 25%;
+    padding: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+textarea{
+    width: 400px;
+    height: 200px;
+}
+
+.active {
+    background-color: #ff66f7;
+}
+
+.navbar {
+    position: relative;
+    margin-left: -10px;
+    margin-right: -10px;
+    margin-top: -10px;
+}
+
+.navbar-list {
+    list-style-type: none;
+    margin: 0px;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+.navbar-item {
+    float: left;
+    font-size: 100%;
+}
 
 .content {
-    position: fixed;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.5);
-    color: #f1f1f1;
-    width: 100%;
-    padding: 0;
+    position: relative;
+    text-align: center;
     font-family: 'Urbanist', sans-serif;
 }
+
+.about-me {
+    position: relative;
+    text-align: left;
+    margin-right: auto;
+    margin-left: auto;
+    width:50%;
+    background-color: rgba(0, 0, 0, .75);
+}
+
+.img-header {
+    text-align: center;
+    font-size: 250%;
+}
+
+.img-text {
+
+    width:30%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 150%
+}
+.contact{
+    border-radius: 5px;
+    background-color: rgba(0,0,0,.75);
+    padding: 20px;
+    height: 50%;
+    position:relative;
+    text-align: center;
+    font-family: 'Urbanist', sans-serif;
+    color: white;
+    font-size: 20px;
+}
+
 
 #myVideo {
     position: fixed;
