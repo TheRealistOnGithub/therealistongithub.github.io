@@ -7,12 +7,13 @@ window.onload = function () {
         if (checkFName() && checkLName() && checkPhone() && checkEmail() && checkMessage()) {
             emailjs.sendForm("service_oh9v42p","template_5xvd9wk", document.getElementById('contact-form'))
                 .then(function () {
-                    alert("email sent!");
                     console.log('SUCCESS!');
 
                 }, function (error) {
                     console.log('FAILED...', error);
                 });
+            document.getElementById("contact-form").reset();
+            window.alert("email sent!");
         } else if (!checkFName()) {
             alert("Enter a valid first name!")
         } else if (!checkLName()) {
@@ -47,7 +48,6 @@ function checkLName() {
  * @returns {boolean}
  */
 function checkPhone() {
-    console.log("test phone")
     return /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/.test(document.getElementById("user_phone").value);
 
 
