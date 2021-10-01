@@ -8,6 +8,7 @@ window.onload = function () {
             emailjs.sendForm("service_oh9v42p","template_5xvd9wk", document.getElementById('contact-form'))
                 .then(function () {
                     console.log('SUCCESS!');
+                    alert("email sent!");
                 }, function (error) {
                     console.log('FAILED...', error);
                 });
