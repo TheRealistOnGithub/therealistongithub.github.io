@@ -1,22 +1,16 @@
-(function () {
-    // inits email js service
-    emailjs.init('user_e3JyZJM7g7sO936ULyS71');
-})();
-
 /**
  * main email function, checks if users input form is valid, and alerts if it isnt
  */
-function sendEmail() {
+window.onload = function () {
     document.getElementById('contact-form').addEventListener('submit', function (event) {
         event.preventDefault();
         if (checkFName() && checkLName() && checkPhone() && checkEmail() && checkMessage()) {
-            emailjs.sendForm("contact_service", "contact_form", this)
+            emailjs.sendForm("service_oh9v42p","template_5xvd9wk", document.getElementById('contact-form'))
                 .then(function () {
-                    console.log("SUCCESS");
+                    console.log('SUCCESS!');
+                }, function (error) {
+                    console.log('FAILED...', error);
                 });
-            document.getElementById("contact-form").reset();
-            window.alert("Email sent!");
-            console.log("TEST");
         } else if (!checkFName()) {
             alert("Enter a valid first name!")
         } else if (!checkLName()) {
@@ -27,6 +21,8 @@ function sendEmail() {
             alert("Enter a valid email address!")
         } else if (!checkMessage()) {
             alert("Enter a message!")
+        } else {
+            alert("fail");
         }
     });
 }
@@ -49,7 +45,9 @@ function checkLName() {
  * @returns {boolean}
  */
 function checkPhone() {
+    console.log("test phone")
     return /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/.test(document.getElementById("user_phone").value);
+
 
 }
 
@@ -58,37 +56,11 @@ function checkPhone() {
  * @returns {boolean} is the email valid
  */
 function checkEmail() {
-    const domains = getDomains()
-    const email = document.getElementById("user_email").split('@')
+    return /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(document.getElementById("user_email").value);
 
-    if (email.length === 2) {
-        const firsthalf = email[1].split('.')
-        if (firsthalf.length === 2) {
-            const address = firsthalf[1]
 
-            for (const item of domains) {
-                if (address === item.toLowerCase()) {
-                    return true
-                }
-            }
-            return true
-        }
-
-    }
-    return false
 }
 
-/**
- *  scrapes list of domains to check for valid addresses
- * @returns {*|string[]} list of domains
- */
-function getDomains() {
-    const list = fetch('http://data.iana.org/TLD/tlds-alpha-by-domain.txt')
-    const rawdata = list.text()
-    const domains = rawdata.split('\n')
-    domains.splice(0, 1) //removes the first line of the text file
-    return domains;
-}
 
 /**
  * checks if a message is empty
