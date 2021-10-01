@@ -5,7 +5,7 @@ window.onload = function () {
     document.getElementById('contact-form').addEventListener('submit', function (event) {
         event.preventDefault();
         if (checkFName() && checkLName() && checkPhone() && checkEmail() && checkMessage()) {
-            emailjs.sendForm("service_oh9v42p","template_5xvd9wk", document.getElementById('contact-form'))
+                emailjs.sendForm("service_oh9v42p","template_5xvd9wk", document.getElementById('contact-form'))
                 .then(function () {
                     console.log('SUCCESS!');
 
