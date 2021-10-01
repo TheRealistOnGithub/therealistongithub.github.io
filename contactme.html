@@ -10,12 +10,12 @@
     <title>Contact Form</title>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
     <script type="text/javascript">
-        (function() {
+        (function () {
             emailjs.init("user_e3JyZJM7g7sO936ULyS71");
         })();
     </script>
     <script>
-        src = "src/index.js"
+        src = "/src/index.js"
     </script>
     <link rel="stylesheet" href="css/styles.css">
 </head>
@@ -38,19 +38,22 @@
     <form id="contact-form">
         <input type="hidden" name="contact_number">
         <label> First Name</label>
-        <input type="text" placeholder="Enter your first name" id="user_fname" name="user_fname"/>
+        <label for="user_fname"></label><input type="text" placeholder="Enter your first name" id="user_fname"
+                                               name="user_fname"/>
         <br><br>
         <label> Last Name</label>
-        <input type="text" placeholder="Enter your last name" id="user_lname" name="user_lname"/>
+        <label for="user_lname"></label><input type="text" placeholder="Enter your last name" id="user_lname"
+                                               name="user_lname"/>
         <br><br>
         <label> Phone Number</label>
-        <input type="text" placeholder="Enter your phone number" id="user_phone" name=" user_phone"/>
+        <label for="user_phone"></label><input type="text" placeholder="Enter your phone number" id="user_phone"
+                                               name=" user_phone"/>
         <br><br>
         <label>Email</label>
-        <input type="text" placeholder="Enter your email" id="user_email"/>
+        <label for="user_email"></label><input type="text" placeholder="Enter your email" id="user_email"/>
         <br><br>
         <label>Message</label>
-        <textarea id="user_message" name="message"></textarea>
+        <label for="user_message"></label><textarea id="user_message" name="message"></textarea>
         <input type="submit" value="Send">
         <br><br>
     </form>
