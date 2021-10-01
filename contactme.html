@@ -9,12 +9,17 @@
 <head>
     <title>Contact Form</title>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            emailjs.init("user_e3JyZJM7g7sO936ULyS71");
+        })();
+    </script>
     <script>
-        src = "/src/index.js"
+        src = "index.js"
     </script>
     <link rel="stylesheet" href="css/styles.css">
 </head>
-<body>
+<body  onload="sendMail();">
 <div class="navbar">
     <ul class="navbar-list">
         <li class="navbar-item"><a href="https://rallarey.github.io/">Previous Student</a></li>

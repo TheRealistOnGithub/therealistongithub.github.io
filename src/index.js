@@ -16,6 +16,7 @@ function sendEmail() {
                 });
             document.getElementById("contact-form").reset();
             window.alert("Email sent!");
+            console.log("TEST");
         } else if(!checkFName()){
             alert("Enter a valid first name!")
         } else if(!checkLName()){
