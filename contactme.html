@@ -8,17 +8,10 @@
 </video>
 <head>
     <title>Contact Form</title>
-    <script>
-        src = "src/index.js"
-    </script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
-    <script type="text/javascript">
-        (function () {
-            // https://dashboard.emailjs.com/admin/integration
-            emailjs.init('user_e3JyZJM7g7sO936ULyS71');
-        })();
+    <script>
+        src = "/src/index.js"
     </script>
-
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
@@ -52,7 +45,7 @@
         <input type="text" placeholder="Enter your email" id="user_email"/>
         <br><br>
         <label>Message</label>
-        <textarea name="message"></textarea>
+        <textarea id="user_message" name="message"></textarea>
         <input type="submit" value="Send">
         <br><br>
     </form>
