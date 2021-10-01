@@ -9,7 +9,7 @@
 function sendEmail() {
     document.getElementById('contact-form').addEventListener('submit', function (event) {
         event.preventDefault();
-        if(checkFName()&&checkLName()&&checkPhone()&&checkEmail()&&checkMessage()){
+        if (checkFName() && checkLName() && checkPhone() && checkEmail() && checkMessage()) {
             emailjs.sendForm("contact_service", "contact_form", this)
                 .then(function () {
                     console.log("SUCCESS");
@@ -17,15 +17,15 @@ function sendEmail() {
             document.getElementById("contact-form").reset();
             window.alert("Email sent!");
             console.log("TEST");
-        } else if(!checkFName()){
+        } else if (!checkFName()) {
             alert("Enter a valid first name!")
-        } else if(!checkLName()){
+        } else if (!checkLName()) {
             alert("Enter a valid last name!")
-        } else if(!checkPhone()){
+        } else if (!checkPhone()) {
             alert("Enter a valid phone number!")
-        } else if(!checkEmail()){
+        } else if (!checkEmail()) {
             alert("Enter a valid email address!")
-        }else if(!checkMessage()){
+        } else if (!checkMessage()) {
             alert("Enter a message!")
         }
     });
