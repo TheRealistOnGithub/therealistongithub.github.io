@@ -13,8 +13,13 @@ h1 {
 h2 {
     font-family: 'Urbanist', sans-serif;
     position: center;
-    font-size: 200%;
+    font-size: 48px;
     color: #f1f1f1;
+}
+
+h3{
+    font-family: 'Urbanist', sans-serif;
+    font-size: 24px;
 }
 
 p {
@@ -199,6 +204,9 @@ textarea {
     text-align: center;
 }
 
+/*
+Footer CSS
+ */
 .column {
     float: left;
     width: 33%;
@@ -212,7 +220,7 @@ textarea {
     display: table;
 }
 
-.icon-img{
+.icon-img {
     height: 10%;
     width: 10%;
 }
@@ -221,7 +229,50 @@ textarea {
     box-sizing: border-box;
 }
 
+/*
+    project.html CSS
+ */
+/* Float four columns side by side */
+.card-column {
+    float: left;
+    width: 25%;
+    padding: 0 10px;
+}
 
+/* Remove extra left and right margins, due to padding */
+.row {
+    margin: 0 -5px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+
+}
+
+/* Responsive columns */
+@media screen and (max-width: 600px) {
+    .card-column {
+        width: 100%;
+        display: block;
+        margin-bottom: 20px;
+    }
+}
+
+/* Style the counter cards */
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 16px;
+    text-align: center;
+    background-color: #f682fd;
+}
+
+.card-text{
+    color: white;
+    font-family: 'Urbanist', sans-serif;
+}
 #myVideo {
     width: 100vw;
     height: 100vh;
